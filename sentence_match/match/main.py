@@ -53,25 +53,9 @@ que_index = tdata.que_index
 #结果集对应查询和答案文本编号为
 rel_index = tdata.rel_index
 rel_docs = tdata.rel_docs
-perwords = sum([len(doc) for doc in documents])/len(documents)
-
-print("In the doc-text dataset there are", len(documents), "textual documents")
-print("In the query-text dataset there are ",len(que_index),"query documents")
-print("In the rlv-ass dataset there are ",len(rel_docs),"answers")
-
-print("In the collection words per document are ",perwords)
 
 
 
-'''
-print(file_index[:3],len(file_index))
-print(documents[:3])
-print(que_index[:3],len(que_index))
-print(que_documents[:3])
-
-print(rel_index,len(rel_index))
-print(rel_docs)
-'''
 
 '''
 2.数据预处理
@@ -81,13 +65,6 @@ preprocess = pp.PreProc(que_documents,documents)
 all_que_slices = preprocess.Puncut(0)
 all_doc_slices = preprocess.Puncut(1)
 que_docs,processed_docs = preprocess.Normal()
-
-#print(all_doc_slices[:3])
-#print(len(all_que_slices))
-#print(all_que_slices[28])
-
-#all_que_slices = all_que_slices[:3]
-#que_docs = que_docs[:3]
 docs_have = preprocess.FetchDocs(c_data, que_docs,rel_docs)
 
 
