@@ -14,7 +14,6 @@ runing sensitive.py
 
 show: 
 
-1.the F1 comparison with different about the threshold of related snippet in data Med
-
-2.the F1 comparison with different about the threshold of related snippet in data LISA
+1.the F1 comparison with different about the threshold of related snippet in data Med.
+2.the F1 comparison with different about the threshold of related snippet in data LISA.
 
